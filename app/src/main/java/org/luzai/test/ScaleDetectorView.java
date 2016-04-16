@@ -10,12 +10,12 @@ import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
 
-public class ScaleDetector extends View {
+public class ScaleDetectorView extends View {
     private Drawable image;
     private float scaleFactor = 1.0f;
     private ScaleGestureDetector scaleGestureDetector;
 
-    public ScaleDetector(Context context) {
+    public ScaleDetectorView(Context context) {
         super(context);
         image = context.getResources().getDrawable(R.drawable.wolf);
         setFocusable(true);

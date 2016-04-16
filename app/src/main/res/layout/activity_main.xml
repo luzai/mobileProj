@@ -44,27 +44,54 @@
 
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
         <Button
             android:id="@+id/buttonOther1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Lauch 1" />
+            android:layout_weight="0.5"
+            android:text="Explicit Without Para" />
+
         <Button
             android:id="@+id/buttonOther2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Lauch 2" />
-        <Button
-            android:id="@+id/buttonExit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/exit" />
+            android:layout_weight="0.5"
+            android:text="Explicit with Result" />
+
+
+        />
+
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_weight="0.5"
+            android:id="@+id/buttonDial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LauchDial" />
+
+        <Button
+            android:layout_weight="0.5"
+            android:id="@+id/buttonOther3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Implicit My Activity"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/buttonExit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/exit" />
     <org.luzai.test.MultiTouchView
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

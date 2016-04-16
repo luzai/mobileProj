@@ -7,60 +7,68 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CHOOSE: Rainy or Sunny "
-        android:padding="@dimen/abc_action_bar_content_inset_material"
-        android:textSize="@dimen/abc_action_bar_content_inset_material"
+        android:layout_marginBottom="10dp"
         android:layout_marginLeft="12dp"
         android:layout_marginTop="23dp"
-        android:layout_marginBottom="10dp" />
+        android:padding="@dimen/abc_action_bar_content_inset_material"
+        android:text="CHOOSE: Rainy or Sunny "
+        android:textSize="@dimen/abc_action_bar_content_inset_material" />
 
     <ImageView
-        android:padding="@dimen/activity_horizontal_margin"
+        android:id="@+id/imageViewWeather"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/imageViewWeather"
-        android:src="@drawable/weather_sun"/>
-
+        android:padding="@dimen/activity_horizontal_margin"
+        android:src="@drawable/weather_sun" />
 
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Rainy"
         android:id="@+id/textViewRainy"
-        android:gravity="center"
-        android:textColor="@color/bright_foreground_inverse_material_light"
-        android:background="@color/material_deep_teal_200"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginBottom="3dp"
-        android:paddingTop="3dp"
-        android:paddingBottom="3dp" />
-
-    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sunny"
-        android:id="@+id/textViewSunny"
-        android:gravity="center"
-        android:textColor="@color/bright_foreground_inverse_material_light"
-        android:background="@color/material_deep_teal_200"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginRight="50dp"
         android:layout_marginBottom="3dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/material_deep_teal_200"
+        android:gravity="center"
+        android:paddingBottom="3dp"
         android:paddingTop="3dp"
-        android:paddingBottom="3dp" />
+        android:text="Rainy"
+        android:textColor="@color/bright_foreground_inverse_material_light" />
+
+    <TextView
+        android:id="@+id/textViewSunny"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/material_deep_teal_200"
+        android:gravity="center"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp"
+        android:text="Sunny"
+        android:textColor="@color/bright_foreground_inverse_material_light" />
 
     <Button
+        android:id="@+id/buttonExit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Save And Exit"
-        android:id="@+id/buttonExit"
-        android:gravity="center"
-        android:textSize="12dp"
         android:layout_gravity="center"
-        android:layout_margin="@dimen/abc_action_bar_content_inset_material" />
+        android:layout_margin="@dimen/abc_action_bar_content_inset_material"
+        android:gravity="center"
+        android:text="Save And Exit"
+        android:textSize="12dp" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="If you click BACK, the result will still be passed automated!"
+        android:layout_margin="5pt"
+        android:layout_gravity="center"
+        android:paddingTop="0pt"
+        android:paddingLeft="5pt"
+        android:paddingRight="5pt" />
 </LinearLayout>
