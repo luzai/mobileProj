@@ -113,12 +113,20 @@ public class MainActivity extends AppCompatActivity {
         btnLauchDial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(Intent.ACTION_DIAL, Uri.parse("Tel:13454943948"));
-                try {
+                Intent in = new Intent(Intent.ACTION_CALL, Uri.parse("Tel:13454943948"));
+                 //in.setPackage("com.android.phone");
+                // in.setPackage("com.android.server.telecom");
+               try {
                     startActivity(in);
                 } catch (android.content.ActivityNotFoundException ex) {
-                    Toast.makeText(getApplicationContext(), "yourActivity is not founded", Toast.LENGTH_SHORT).show();
-                }
+                    Toast.makeText(getApplicationContext(), "Dial Activity is not founded, Web launched instead!", Toast.LENGTH_SHORT).show();
+                   Intent in2 = new Intent(Intent.ACTION_VIEW,
+                           Uri.parse("http://www.baidu.com"));
+                   startActivity(in2);
+               } finally {
+                   Toast.makeText(getApplicationContext(), "Fail to launch implicit defuault activity! ", Toast.LENGTH_SHORT).show();
+
+               }
             }
         });
 

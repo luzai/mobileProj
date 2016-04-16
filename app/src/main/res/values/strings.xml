@@ -2,7 +2,7 @@
     <string name="app_name">Test</string>
     <string name="exit">Exit</string>
     <string name="edit">Edit</string>
-    <string name="init">This is a basic laboratory. Click or Edit. </string>
+    <string name="init">All Message Will Show Here Automatically. </string>
     <string name="cnt_number">Click</string>
     <string name="correct_toast">correct!</string>
     <string name="incorrect_toast">incorrect!</string>

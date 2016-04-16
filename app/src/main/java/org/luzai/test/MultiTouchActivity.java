@@ -14,6 +14,6 @@ public class MultiTouchActivity extends Activity {
         //setContentView(new SingleTouchEventView(this,null));
         //setContentView(R.layout.activity_main);
         setContentView(new ScaleDetectorView(this));
-
+        //setContentView(R.layout.activity_scale);
     }
 }

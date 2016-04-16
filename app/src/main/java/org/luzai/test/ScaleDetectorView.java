@@ -3,9 +3,11 @@ package org.luzai.test;
 /**
  * Created by luzai on 4/15/16.
  */
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
@@ -15,22 +17,26 @@ public class ScaleDetectorView extends View {
     private float scaleFactor = 1.0f;
     private ScaleGestureDetector scaleGestureDetector;
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public ScaleDetectorView(Context context) {
         super(context);
         image = context.getResources().getDrawable(R.drawable.wolf);
         setFocusable(true);
-        image.setBounds(0, 0, image.getIntrinsicWidth(),
+        image.setBounds(0,0, image.getIntrinsicWidth(),
                 image.getIntrinsicHeight());
         scaleGestureDetector = new ScaleGestureDetector(context,
                 new ScaleListener());
-    }
+
+        }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        // Set the image bounderies
+        // Set the image boundries
         canvas.save();
+       // canvas.clipRect(canvas.getWidth()/4,canvas.getHeight()/4,canvas.getWidth()/4,canvas.getHeight()/4);
         canvas.scale(scaleFactor, scaleFactor);
+
         image.draw(canvas);
         canvas.restore();
     }

@@ -4,16 +4,15 @@ package org.luzai.test;
  * Created by luzai on 4/15/16.
  */
 
-
-        import android.content.Context;
-        import android.graphics.Canvas;
-        import android.graphics.Color;
-        import android.graphics.Paint;
-        import android.graphics.PointF;
-        import android.util.AttributeSet;
-        import android.util.SparseArray;
-        import android.view.MotionEvent;
-        import android.view.View;
+import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.PointF;
+import android.util.AttributeSet;
+import android.util.SparseArray;
+import android.view.MotionEvent;
+import android.view.View;
 
 public class MultiTouchView extends View {
 
@@ -21,9 +20,9 @@ public class MultiTouchView extends View {
 
     private SparseArray<PointF> mActivePointers;
     private Paint mPaint;
-    private int[] colors = { Color.BLUE, Color.GREEN, Color.MAGENTA,
+    private int[] colors = {Color.BLUE, Color.GREEN, Color.MAGENTA,
             Color.BLACK, Color.CYAN, Color.GRAY, Color.RED, Color.DKGRAY,
-            Color.LTGRAY, Color.YELLOW };
+            Color.LTGRAY, Color.YELLOW};
 
     private Paint textPaint;
 
@@ -100,7 +99,7 @@ public class MultiTouchView extends View {
                 mPaint.setColor(colors[i % 9]);
             canvas.drawCircle(point.x, point.y, SIZE, mPaint);
         }
-        canvas.drawText("Total pointers: " + mActivePointers.size(), 10, 40 , textPaint);
+        canvas.drawText("Total pointers: " + mActivePointers.size(), 10, 40, textPaint);
     }
 
 }
